@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <title>WeatherApp</title>
+</head>
+
+<body>
+    <div class="loader open" id="page-loader">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- APPID 18cfd6a9c0c00fa65fddb33e2ec3981a -->
+    <div class="bg" id="gradient">
+        <div class="weather">
+            <div class="weather__sidebar">
+                <div class="weather__icon">
+                    <div class="weather__logo" id="icon">
+                        <img src="./public/images/Cloudy Skies Icon.svg" alt="img">
+                    </div>
+                    <div class="weather__name" id="weather-description">
+
+                    </div>
+                </div>
+                <div class="weather__status">
+                    <div class="weather__header">
+                        <a href="#" class="weather__time active" id="today">
+                            Today
+                        </a>
+                        <a href="#" class="weather__time" id="week">
+                            Week
+                        </a>
+                    </div>
+                    <ul class="weather__indicator" id="weather-today-content">
+                        <!-- <li>
+                            <div class="weather__hour">
+                                Now
+                            </div>
+                            <div class="weather__temp">
+                                <img src="./public/images/img2.svg" alt="img">
+                                <div class="weather__celcius">
+                                    22°
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                    <ul class="weather__indicator" hidden id="weather-week-content">
+                        <!-- <li>
+                            <div class="weather__hour">
+                                Now
+                            </div>
+                            <div class="weather__temp">
+                                <img src="./public/images/img2.svg" alt="img">
+                                <div class="weather__celcius">
+                                    25°
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="weather__main">
+                <div class="weather__location">
+                    <div class="weather__city" id="city">
+
+                    </div>
+                    <div class="weather__state" id="country">
+
+                    </div>
+                </div>
+                <div class="weather__item">
+                    <div class="weather__data">
+                        <div class="weather__period" id="time">
+
+                        </div>
+                        <div class="weather__day" id="date">
+
+                        </div>
+                    </div>
+                    <div class="weather__number" id="temperature">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="./src/js/api.js"></script>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

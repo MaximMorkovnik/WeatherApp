@@ -1,0 +1,213 @@
+@import 'loader';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+%font_italic {
+    font-style: italic;
+    font-size: 12px;
+    color: #4F4F4F;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000000;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100vh;
+
+    .weather {
+        width: 650px;
+        margin: 0 auto;
+        background: url(../images/img3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        box-shadow: 3px 14px 17px 4px rgba(0, 0, 0, 0.43);
+
+        &__sidebar {
+            width: 40%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        // &__icon {
+        //     height: 20%;
+        // }
+
+        &__logo {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__name {
+            font-style: italic;
+            font-size: 24px;
+            color: #9E9E9E;
+            // margin-top: 5px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__status {
+            width: 100%;
+            // margin-top: 40px; 
+
+            ul {
+                max-height: 250px;
+                overflow: auto;
+            }
+        }
+
+        &__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #D6E6F1;
+        }
+
+        &__time {
+            font-style: italic;
+            font-size: 12px;
+            color: #9C9C9C;
+            text-decoration: none;
+            padding-bottom: 11px;
+            border-bottom: 3px solid rgba(181, 221, 250, 0);
+            transition: color 0.2s linear, border-bottom 0.2s linear;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &.active {
+                color: #5C5C5C;
+                border-bottom: 3px solid #B5DDFA;
+                outline: none;
+            }
+        }
+
+        &__indicator {
+            padding-top: 20px;
+
+            li {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 23px;
+                margin-right: 23px;
+                margin-bottom: 9px;
+                padding-bottom: 8px;
+                border-bottom: 1px solid #E8E8E8;
+
+                .weather__temp {
+                    display: flex;
+                    align-items: center;
+                    padding-right: 11px;
+
+                    img {
+                        margin-right: 6px;
+                        margin-top: -7px;
+                    }
+                }
+
+                .weather__hour {
+                    @extend %font_italic;
+                    padding-left: 5px;
+                }
+
+                .weather__celcius {
+                    @extend %font_italic;
+                }
+            }
+
+            li:last-child {
+                border: none;
+            }
+        }
+
+        &__main {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__location {
+            max-width: 100%;
+            text-align: end;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        &__city {
+            font-style: italic;
+            font-size: 36px;
+            color: #507998;
+            letter-spacing: -1px;
+
+        }
+
+        &__state {
+            font-size: 12px;
+            font-style: italic;
+            color: #98C6E8;
+            letter-spacing: 1.71429px;
+            margin-top: 5px;
+        }
+
+        &__item {
+            display: flex;
+            color: #ffffff;
+            justify-content: space-between;
+            margin-left: 26px;
+            margin-bottom: 27px;
+            align-items: flex-end;
+        }
+
+        &__period {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        &__day {
+            font-style: italic;
+            font-size: 18px;
+            opacity: 0.85;
+            padding-top: 10px;
+        }
+
+        &__number {
+            font-size: 100px;
+            font-style: italic;
+            letter-spacing: -7px;
+            margin-right: 20px;
+            margin-bottom: -15px;
+        }
+    }
+}
+
+#gradient {
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
